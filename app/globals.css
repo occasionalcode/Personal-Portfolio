@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
+
+      --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%;
+
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+
+      --primary: 222.2 47.4% 11.2%;
+      --primary-foreground: 210 40% 98%;
+
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 222.2 84% 4.9%;
+
+      --radius: 0.5rem;
+    }
+
+    .dark {
+      --background: 222.2 84% 4.9%;
+      --foreground: 210 40% 98%;
+
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+
+      --primary: 210 40% 98%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 212.7 26.8% 83.9%;
+    }
+  }
+  html, body {
+    overflow-x: hidden;
+  }
+  .border-gradient-rounded {
+    /* Border */
+    border: 2px solid transparent;
+    border-radius: 50px; /* Adjust the radius as needed */
+    background: 
+      linear-gradient(to right, black 0%, black 100%), /* Inner gradient - adjust color stops */
+      linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 95%); /* Outer gradient - adjust color stops */
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+  }
+  
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 15px;
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-track:hover {
+    border-radius: 0rem;
+    background: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #7d7d7d;
+    border-radius: 50vh;
+    height: 100px;
+    
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b4b4b4;
+  }
+}
+
+  @layer base {
+
+
+    .font-outline-2 {
+      
+      
+        text-shadow: 
+        -1px -1px 0 white,  
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white;
+    }
+    .font-outline-3 {
+      
+      
+        text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black
+    }
+    
+    * {
+      @apply border-border;
+    }
+    
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+
+  /* styles.css */
+@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100px, -200px);
+  }
+  50% {
+    transform: translate(200px, 0);
+  }
+  75% {
+    transform: translate(-100px, 200px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes bounceMobile {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(50px, -100px);
+  }
+  50% {
+    transform: translate(100px, 0);
+  }
+  75% {
+    transform: translate(-50px, 100px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.bounce {
+  animation: bounce 6s infinite alternate ease-in-out;
+}
+
+.bounce-2 {
+  animation: bounce 8s infinite alternate ease-in-out;
+}
+
+.bounce-3 {
+  animation: bounce 10s infinite alternate ease-in-out;
+}
+.bounce-4 {
+  animation: bounce 12s infinite alternate ease-in-out;
+}
+
+
+.bounce-mobile {
+  animation: bounceMobile 6s infinite alternate ease-in-out;
+}
+
+.bounce-2-mobile {
+  animation: bounceMobile 8s infinite alternate ease-in-out;
+}
+
+.bounce-3-mobile {
+  animation: bounceMobile 10s infinite alternate ease-in-out;
+}
+.bounce-4-mobile {
+  animation: bounceMobile 12s infinite alternate ease-in-out;
+}
+
+@keyframes carousel {
+  0% { transform: translateY(0); }
+  20%, 25%{ transform: translateY(-100%); }
+  25%, 85%{ transform: translateY(-100%); }
+  85%, 100% { transform: translateY(0); }
+}
+@keyframes carousel-mirror {
+  0% { transform: translateY(0); }
+  20%, 25%{ transform: translateY(100%); }
+  25%, 85%{ transform: translateY(100%); }
+  85%, 100% { transform: translateY(0); }
+}
+
+.animation-container {
+  animation: carousel 20s infinite;
+  animation-delay: 5s; /* Delay the animation start by 5 seconds */
+} 
+
+.animate-carousel {
+  position: relative;
+}
+.animation-container-mirror {
+  animation: carousel 20s infinite;
+  animation-delay: 5s; /* Delay the animation start by 5 seconds */
+} 
+
+.animate-carousel-mirror {
+  position: relative;
+}
+
+
