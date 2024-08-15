@@ -20,7 +20,7 @@ export default function Hero() {
   return (
     <div className={`${darkMode && "dark"}`}>
       <div
-        className={`w-screen h-screen flex justify-center items-center dark:bg-black relative transition-colors duration-500 ${
+        className={`w-full h-screen flex justify-center items-center dark:bg-black relative transition-colors duration-500 ${
           isFading ? (darkMode ? "animate-fadeIn" : "animate-fadeOut") : ""
         }`}
       >
