@@ -30,7 +30,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-screen sticky top-5 flex justify-center z-30 ">
+    <div className="w-full sticky top-5 flex justify-center z-30 ">
       <ul className="bg-navbarGrey1 w-72 h-10 absolute flex flex-row justify-evenly rounded-2xl mobilesS:hidden sm:flex ">
         <li className="bg-navbarGrey1 w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
           <BookUser size={25} />
