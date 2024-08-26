@@ -24,7 +24,7 @@ export default function Hero() {
           isFading ? (darkMode ? "animate-fadeIn" : "animate-fadeOut") : ""
         }`}
       >
-        <Balls />
+        <Balls ball={3} />
         <div className="absolute mobilesS:left-5 mobilesS:bottom-5 xl:left-16 xl:bottom-14">
           <Avatar className="mobilesS:size-8 sm:size-10 xl:size-16">
             <AvatarImage src="https://github.com/shadcn.png" />
