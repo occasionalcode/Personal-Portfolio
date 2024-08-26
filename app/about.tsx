@@ -24,7 +24,7 @@ export default function About() {
 
   return (
     <div className={`${darkMode ? "dark" : ""}`}>
-      <div className="w-full h-screen dark:bg-black flex justify-center">
+      <div className="w-full py-20 dark:bg-black flex justify-center">
         <div className="justify-center items-center w-full  mobilesS:flex mobilesS:flex-col-reverse md:grid md:grid-cols-2  mobilesS:gap-5 mobilesS:px-5 mobileL:px-12 sm:px-16 md:px-12 ">
           <div className="flex flex-col font-Montserrat sm:gap-3 mobilesS:justify-center mobilesS:items-center mobilesS:text-5xl mobileL:text-6xl sm:text-8xl md:text-7xl md:gap-0 md:items-start lg:text-9xl xl:text-[11rem] font-black md:mt-20">
             <div className="mobilesS:flex mobilesS:gap-5 sm:gap-7 md:gap-2 md:flex-col lg:gap-0">
@@ -54,7 +54,7 @@ export default function About() {
               </p>
             </div>
             <div>
-              <p className="mobilesS:text-sm mobilesS:text-center mobileL:text-base sm:text-2xl md:text-xl lg:text-[25px] xl:text-3xl w-full md:text-start font-normal text-white">
+              <p className="mobilesS:text-center mobilesS:text-sm  mobileL:text-base sm:text-2xl md:text-xl lg:text-[25px] xl:text-3xl w-full md:text-start font-normal text-white">
                 I DESIGN and DEVELOP UNIQUE web - mobile - software graphic
                 EXPERIENCE
               </p>
