@@ -55,7 +55,10 @@ import {
 
 export function CarouselHorizontal({ items }: { items: string[] }) {
   return (
-    <Carousel opts={{ align: "start" }} className=" mobilesS:w-4/5 lg:w-11/12">
+    <Carousel
+      opts={{ align: "start", loop: true }}
+      className=" mobilesS:w-4/5 lg:w-11/12"
+    >
       <div className="mobilesS:flex mobilesS:flex-col mobilesS:gap-5 sm:static">
         <CarouselContent>
           {items.map((item, index) => (
