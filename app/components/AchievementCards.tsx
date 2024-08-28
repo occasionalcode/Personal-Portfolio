@@ -1,10 +1,12 @@
 import { ArrowUpRight, CalendarDays, Trophy } from "lucide-react";
+import { CustomAlertDialog } from "./reusable components/AlertDialog";
 
 type CarouselVerticalProps = {
   title: string;
   year: number;
   description: string;
   pic: string;
+  link: string;
 };
 
 export default function AchievementsCards({
@@ -12,6 +14,7 @@ export default function AchievementsCards({
   year,
   description,
   pic,
+  link,
 }: CarouselVerticalProps) {
   return (
     <div className="w-full h-full text-white flex items-center justify-center">
@@ -46,10 +49,19 @@ export default function AchievementsCards({
           <button className="border-2  border-white mobilesS:h-full mobilesS:w-full mobilesS:px-2 mobilesS:py-1 sm:py-3 md:py-2 rounded-sm  ">
             More
           </button>
-          <button className="bg-red-600 mobilesS:h-full mobilesS:px-2 mobilesS:w-full mobilesS:py-1.5 sm:py-3 md:py-2.5 rounded flex  justify-center items-center gap-2">
+          {/* <a
+            href={`${link}`}
+            className="bg-red-600 mobilesS:h-full mobilesS:px-2 mobilesS:w-full mobilesS:py-1.5 sm:py-3 md:py-2.5 rounded flex  justify-center items-center gap-2"
+          >
             View Post
             <ArrowUpRight className="mobilesS:size-5 lg:size-6" />
-          </button>
+          </a> */}
+          <CustomAlertDialog
+            link={`${link}`}
+            redirectSite="Facebook"
+            icon={<ArrowUpRight className="mobilesS:size-5 lg:size-6" />}
+            trigger="View Post"
+          />
         </div>
       </div>
     </div>

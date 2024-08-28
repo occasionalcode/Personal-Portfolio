@@ -1,5 +1,5 @@
 import React from "react";
-import { useDarkmode } from "../stores/globalStates";
+import { useDarkmode } from "@/app/stores/globalStates";
 
 export default function Balls({ ball }: { ball: number }) {
   const darkMode = useDarkmode((state) => state.darkMode);
