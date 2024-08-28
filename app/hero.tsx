@@ -1,8 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import Balls from "./components/Balls";
+
 import { useDarkmode } from "./stores/globalStates";
+import Balls from "./components/reusable components/Balls";
 
 export default function Hero() {
   const darkMode = useDarkmode((state) => state.darkMode);

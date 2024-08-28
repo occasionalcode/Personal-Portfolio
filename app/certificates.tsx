@@ -1,7 +1,6 @@
 "use client";
 import { Carousel } from "@/components/ui/carousel";
 import { CarouselHorizontal } from "./components/Carousel";
-import Balls from "./components/Balls";
 
 export default function Certificates() {
   const certs = [

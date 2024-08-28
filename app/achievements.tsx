@@ -20,18 +20,21 @@ export default function Achievments() {
       year: 2024,
       description: "CCIS RESEARCH POSTER PRESENTATION CHAMPION",
       pic: "/achievments/OSRA.jpg",
+      link: "https://www.facebook.com/share/eXN5RFN1xbwjh457/",
     },
     {
       title: "DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY",
       year: 2023,
       description: "1ST PLACE IN THE PHILIPPINE STARTUP CHALLENGE",
       pic: "/achievments/DICT.png",
+      link: "https://www.facebook.com/share/p/2UqeZyHzdC3rvi4Q/",
     },
     {
       title: "MINDANAO CONFERENCE FOR INFORMATION TECHNOLOGY STUDENTS",
       year: 2024,
       description: "RESEARCH PRESENTATION CHAMPION",
       pic: "/achievments/MCITS.png",
+      link: "https://www.facebook.com/share/yNGf6ybWQmMj7KwG/",
     },
   ];
 

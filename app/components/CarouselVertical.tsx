@@ -16,6 +16,7 @@ type CarouselVerticalProps = {
   year: number;
   description: string;
   pic: string;
+  link: string;
 };
 
 type ItemsProps = {
@@ -38,6 +39,7 @@ export function CarouselVertical({ items }: ItemsProps) {
                 year={item.year}
                 description={`${item.description}`}
                 pic={`${item.pic}`}
+                link={`${item.link}`}
               />
             </CarouselItem>
           ))}
