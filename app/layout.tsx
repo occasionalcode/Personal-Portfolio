@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./layout/Navbar";
+import Balls from "./components/reusable components/Balls";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,12 +18,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="bg-black w-screen max-w-full font-Montserrat">
-          <div className="max-w-[1440px] mx-auto">
-            <Navbar />
-            {children}
-          </div>
+      <body
+        className={
+          (inter.className, "bg-black w-screen max-w-full font-Montserrat")
+        }
+      >
+        <div className="max-w-[1440px] mx-auto">
+          <Navbar />
+
+          {children}
         </div>
       </body>
     </html>

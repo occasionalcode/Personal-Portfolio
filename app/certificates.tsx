@@ -4,6 +4,7 @@ import { CarouselHorizontal } from "./components/Carousel";
 
 export default function Certificates() {
   const certs = [
+    "/certificates/Telemondo.jpg",
     "/certificates/cert1.png",
     "/certificates/cert2.png",
     "/certificates/cert3.png",

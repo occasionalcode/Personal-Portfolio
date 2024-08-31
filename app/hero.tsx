@@ -21,11 +21,11 @@ export default function Hero() {
   return (
     <div className={`${darkMode && "dark"}`}>
       <div
-        className={`w-full h-screen flex justify-center items-center dark:bg-black relative transition-colors duration-500 ${
+        className={`w-full h-screen flex justify-center items-center dark:bg-black relative transition-colors duration-500  ${
           isFading ? (darkMode ? "animate-fadeIn" : "animate-fadeOut") : ""
         }`}
       >
-        <Balls ball={3} />
+        {/* <Balls ball={4} /> */}
         <div className="absolute mobilesS:left-5 mobilesS:bottom-5 xl:left-16 xl:bottom-14">
           <Avatar className="mobilesS:size-8 sm:size-10 xl:size-16">
             <AvatarImage src="https://github.com/shadcn.png" />
