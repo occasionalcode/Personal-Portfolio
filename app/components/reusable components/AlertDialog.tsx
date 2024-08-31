@@ -43,28 +43,34 @@ export function CustomAlertDialog({
           </button>
         )}
       </AlertDialogTrigger>
-      <AlertDialogContent>
-        <AlertDialogHeader>
+      <AlertDialogContent className="bg-black border-[1px] border-gray-700">
+        <AlertDialogHeader className="text-white">
           {title ? (
             <AlertDialogTitle>{title}</AlertDialogTitle>
           ) : (
             <AlertDialogTitle>Are you sure?</AlertDialogTitle>
           )}
-          {description ? (
-            <AlertDialogDescription>{description}</AlertDialogDescription>
-          ) : (
-            <AlertDialogDescription>
-              This action will redirect you to {redirectSite}. Are you sure you
-              want to continue?
-            </AlertDialogDescription>
-          )}
         </AlertDialogHeader>
-        <AlertDialogFooter>
-          <AlertDialogCancel>Cancel</AlertDialogCancel>
-          <a target="_blank" href={`${link}`}>
-            <AlertDialogAction>Continue</AlertDialogAction>
+        {description ? (
+          <AlertDialogDescription>{description}</AlertDialogDescription>
+        ) : (
+          <AlertDialogDescription className="text-gray-300">
+            This action will redirect you to {redirectSite}. Are you certain you
+            want to proceed?
+          </AlertDialogDescription>
+        )}
+        <div className="w-full flex justify-end items-center gap-5">
+          <div className=" w-full ">
+            <AlertDialogCancel className="bg-transparent border-white border-[1px] w-full  text-white hover:bg-gray-900 hover:text-white">
+              Cancel
+            </AlertDialogCancel>
+          </div>
+          <a target="_blank" href={`${link}`} className="w-full ">
+            <AlertDialogAction className="bg-white text-black w-full hover:bg-gray-300 mt-0">
+              Continue
+            </AlertDialogAction>
           </a>
-        </AlertDialogFooter>
+        </div>
       </AlertDialogContent>
     </AlertDialog>
   );

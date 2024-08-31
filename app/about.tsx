@@ -9,7 +9,6 @@ import Image from "next/image";
 import { tools } from "./stores/tools";
 import StackIcon from "tech-stack-icons";
 import { RemixSVG, WebflowSVG } from "./assets/IconFunctions";
-import Balls from "./components/Balls";
 
 export default function About() {
   const darkMode = useDarkmode((state) => state.darkMode);

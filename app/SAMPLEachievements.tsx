@@ -1,9 +1,10 @@
 "use client";
 import { useEffect } from "react";
-import Balls from "./components/Balls";
+
 // import Slider from "./components/Slider";
 import { useDarkmode } from "./stores/globalStates";
 import Slider from "./components/Slider";
+import Balls from "./components/reusable components/Balls";
 
 export default function SampleAchievments() {
   const awards = [

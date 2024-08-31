@@ -1,5 +1,6 @@
 import { ArrowUpRight, CalendarDays, Trophy } from "lucide-react";
 import { CustomAlertDialog } from "./reusable components/AlertDialog";
+import { CustomDialog } from "./reusable components/Dialog";
 
 type CarouselVerticalProps = {
   title: string;
@@ -7,6 +8,8 @@ type CarouselVerticalProps = {
   description: string;
   pic: string;
   link: string;
+  infoPics: string[];
+  aboutEvent: string;
 };
 
 export default function AchievementsCards({
@@ -15,6 +18,8 @@ export default function AchievementsCards({
   description,
   pic,
   link,
+  infoPics,
+  aboutEvent,
 }: CarouselVerticalProps) {
   return (
     <div className="w-full h-full text-white flex items-center justify-center">
@@ -33,7 +38,7 @@ export default function AchievementsCards({
           </p>
           <div className="flex h-full gap-2 pt-2">
             <div className=" w-1 rounded-lg bg-white" />
-            <div className="">
+            <div>
               <div className="flex items-center gap-1">
                 <CalendarDays className="mobilesS:size-3 lg:size-4" />
                 <p>{year}</p>
@@ -46,9 +51,17 @@ export default function AchievementsCards({
           </div>
         </div>
         <div className="font-semibold  text-sm sm:text-base flex justify-between items-center w-full gap-3 ">
-          <button className="border-2  border-white mobilesS:h-full mobilesS:w-full mobilesS:px-2 mobilesS:py-1 sm:py-3 md:py-2 rounded-sm  ">
+          {/* <button className="border-2  border-white mobilesS:h-full mobilesS:w-full mobilesS:px-2 mobilesS:py-1 sm:py-3 md:py-2 rounded-sm  ">
             More
-          </button>
+          </button> */}
+          <CustomDialog
+            title={`${title}`}
+            trigger="More"
+            description={`${description}`}
+            images={infoPics}
+            aboutEvent={`${aboutEvent}`}
+            year={year}
+          />
           {/* <a
             href={`${link}`}
             className="bg-red-600 mobilesS:h-full mobilesS:px-2 mobilesS:w-full mobilesS:py-1.5 sm:py-3 md:py-2.5 rounded flex  justify-center items-center gap-2"
@@ -61,6 +74,7 @@ export default function AchievementsCards({
             redirectSite="Facebook"
             icon={<ArrowUpRight className="mobilesS:size-5 lg:size-6" />}
             trigger="View Post"
+            title="Confirm Redirection"
           />
         </div>
       </div>
