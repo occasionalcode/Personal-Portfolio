@@ -8,18 +8,18 @@ import Achievments from "./achievements";
 import Achievments2 from "./achievements2";
 import StickyTest from "./demo";
 import Projects from "./projects";
+import ContactMe from "./contactMe";
 
 export default function Home() {
   return (
-    <main className="flex flex-col gap-16 ">
-      <div className="flex flex-col gap-16  ">
-        <Hero />
-        <About />
-      </div>
+    <main className="flex flex-col gap-16 w-full lg:gap-32">
+      <Hero />
+      <About />
+
       <Certificates />
       <Achievments2 />
       <Projects />
-      {/* <StickyTest /> */}
+      <ContactMe />
     </main>
   );
 }

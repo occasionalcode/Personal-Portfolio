@@ -14,14 +14,16 @@ import {
 
 import { Label } from "@/components/ui/label";
 import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
 
 type CustomDialog = {
   trigger: string;
   images?: string[];
   title: string;
   description: string;
-  aboutEvent: string;
+  aboutInfo: string;
   year: number;
+  classname?: string;
 };
 
 export function CustomDialog({
@@ -29,8 +31,9 @@ export function CustomDialog({
   images,
   title,
   description,
-  aboutEvent,
+  aboutInfo,
   year,
+  classname,
 }: CustomDialog) {
   const [expand, setExpand] = useState(false);
 
@@ -51,7 +54,7 @@ export function CustomDialog({
           {trigger}
         </button>
       </DialogTrigger>
-      <DialogContent className=" bg-black border-[1px] border-gray-700 text-white ">
+      <DialogContent className=" bg-black bg-opacity-45 backdrop-blur-xl border-[1px] border-gray-700 text-white ">
         <div className="max-h-[80vh] overflow-scroll py-5">
           <div
             className={` relative flex flex-col mx-auto space-y-2 ${
@@ -63,10 +66,15 @@ export function CustomDialog({
             <div
               className={`absolute w-full h-full  bg-gradient-to-t ${
                 !expand &&
-                `from-black/100 from-[percentage:0%_10%]  via-black/5    to-transparent`
+                `from-black/95 from-[percentage:0%_10%]  via-black/5    to-transparent`
               } z-20`}
             />
-            <div className="md:columns-2 gap-2 w-full space-y-2 h-full">
+            <div
+              className={cn(
+                "md:columns-2 gap-2 w-full space-y-2 h-full",
+                classname
+              )}
+            >
               {images?.map((image, i) => {
                 return (
                   <div key={i} className="break-inside-avoid">
@@ -81,7 +89,7 @@ export function CustomDialog({
               })}
             </div>
           </div>
-          <div className="w-full flex justify-center items-center py-10">
+          <div className={`w-full flex justify-center items-center py-10`}>
             <ArrowDown
               onClick={() => {
                 setExpand(!expand);
@@ -98,7 +106,7 @@ export function CustomDialog({
               </DialogTitle>
             </div>
             <p className="text-gray-300 mobilesS:text-sm md:text-base mobilesS:text-justify ">
-              {aboutEvent}
+              {aboutInfo}
             </p>
             <div className="flex h-full gap-2 pt-2 mobilesS:text-xs md:text-sm pb-20">
               <div className=" w-1 rounded-lg bg-white" />

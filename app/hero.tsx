@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
+import Wave from "react-wavify";
 import { useDarkmode } from "./stores/globalStates";
 import Balls from "./components/reusable components/Balls";
 
@@ -21,11 +21,56 @@ export default function Hero() {
   return (
     <div className={`${darkMode && "dark"}`}>
       <div
-        className={`w-full h-screen flex justify-center items-center dark:bg-black relative transition-colors duration-500  ${
+        id="home"
+        className={`w-full h-screen relative flex justify-center items-center dark:bg-black  transition-colors duration-500 overflow-hidden${
           isFading ? (darkMode ? "animate-fadeIn" : "animate-fadeOut") : ""
         }`}
       >
-        {/* <Balls ball={4} /> */}
+        <div className=" absolute size-32 bottom-0 h-1/3 z-20 right-0  bg-gradient-to-l bl from-black/100 from-[percentage:0%_10%]  via-black/5    to-transparent" />
+        <div className=" absolute size-32 bottom-0 h-1/3 z-20 left-0  bg-gradient-to-r bl from-black/100 from-[percentage:0%_10%]  via-black/5    to-transparent" />
+        <Wave
+          className="absolute bottom-0 h-1/3"
+          mask="url(#mask)"
+          fill="#1277b0"
+          paused={false}
+          style={{ display: "flex" }}
+          options={{
+            height: 30,
+            amplitude: 60,
+            speed: 0.15,
+            points: 5,
+          }}
+        >
+          <defs>
+            <linearGradient id="gradient" gradientTransform="rotate(90)">
+              <stop offset="0" stopColor="white" />
+              <stop offset="0.3" stopColor="black" />
+            </linearGradient>
+            <mask id="mask">
+              <rect
+                x="0"
+                y="0"
+                width="2000"
+                height="500"
+                fill="url(#gradient)"
+              />
+            </mask>
+          </defs>
+        </Wave>
+        <Wave
+          className="absolute bottom-0 h-1/3 stroke-1 stroke-white"
+          mask="url(#mask)"
+          fill="transparent"
+          paused={false}
+          style={{ display: "flex" }}
+          options={{
+            height: 30,
+            amplitude: 75,
+            speed: 0.1,
+            points: 5,
+          }}
+        ></Wave>
+
         <div className="absolute mobilesS:left-5 mobilesS:bottom-5 xl:left-16 xl:bottom-14">
           <Avatar className="mobilesS:size-8 sm:size-10 xl:size-16">
             <AvatarImage src="https://github.com/shadcn.png" />
@@ -39,11 +84,11 @@ export default function Hero() {
             </p>
           </div>
           <div className="flex flex-col">
-            <div className=" flex flex-col items-center overflow-hidden mobilesS:h-12 mobileL:h-16 sm:h-24 md:h-28 lg:h-36 xl:h-64">
+            <div className=" flex flex-col items-center overflow-hidden mobilesS:h-12 mobileL:h-16 sm:h-24 md:h-28 lg:h-36 xl:h-52">
               <div className="flex items-center flex-col">
                 <div className="animation-container">
                   <p
-                    className={`z-30 font-Roboto font-bold mobilesS:text-5xl mobilesS:mb-2 mobileL:text-7xl mobileL:mb-0 sm:text-8xl md:text-9xl lg:text-[10rem] xl:mb-0 xl:text-[16rem] bg-gradient-to-r  ${
+                    className={`z-30 font-Roboto font-bold mobilesS:text-5xl mobilesS:mb-2 mobileL:text-7xl mobileL:mb-0 sm:text-8xl md:text-9xl lg:text-[10rem] xl:mb-0 xl:text-[13rem] bg-gradient-to-r  ${
                       darkMode
                         ? "from-white via-[#545454] to-white"
                         : "from-[#bcbcbc] via-[#282828] to-[#bcbcbc]"
@@ -63,7 +108,7 @@ export default function Hero() {
                 </div>
                 <div className="animation-container">
                   <p
-                    className={`z-30 font-Roboto font-bold mobilesS:text-5xl mobilesS:mb-2 mobileL:text-7xl mobileL:mb-0 sm:text-8xl md:text-9xl lg:text-[10rem] xl:mb-0 xl:text-[16rem] bg-gradient-to-r  ${
+                    className={`z-30 font-Roboto font-bold mobilesS:text-5xl mobilesS:mb-2 mobileL:text-7xl mobileL:mb-0 sm:text-8xl md:text-9xl lg:text-[10rem] xl:mb-0 xl:text-[13rem] bg-gradient-to-r  ${
                       darkMode
                         ? "from-white via-[#545454] to-white"
                         : "from-[#bcbcbc] via-[#282828] to-[#bcbcbc]"

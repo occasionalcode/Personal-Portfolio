@@ -20,10 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          (inter.className, "bg-black w-screen max-w-full font-Montserrat")
+          (inter.className, "bg-black w-screen max-w-full font-Montserrat ")
         }
       >
-        <div className="max-w-[1440px] mx-auto">
+        <div className="max-w-[1440px] mx-auto ">
           <Navbar />
 
           {children}
