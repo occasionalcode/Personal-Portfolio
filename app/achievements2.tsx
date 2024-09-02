@@ -46,7 +46,7 @@ export default function Achievments2() {
         "/achievments/OSRA/osra1.jpg",
       ],
       aboutEvent:
-        "The Outstanding Student Research Award (OSRA) at Mapúa Malayan Colleges Mindanao recognizes top-tier student research within the College of Computer and Information Sciences (CCIS). Our project, HemaLens, won the Best Poster Presentation, standing out among all participants. The combination of a visually engaging poster and a strong presentation secured our position as the top project in the competition, highlighting our dedication and innovation.s",
+        "The Outstanding Student Research Award (OSRA) at Mapúa Malayan Colleges Mindanao recognizes top-tier student research within the College of Computer and Information Sciences (CCIS). Our project, HemaLens, won the Best Poster Presentation, standing out among all participants. The combination of a visually engaging poster and a strong presentation secured our position as the top project in the competition, highlighting our dedication and innovation.",
     },
     {
       title: "DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY",
@@ -67,9 +67,12 @@ export default function Achievments2() {
   ];
 
   return (
-    <div className="flex align-top min-h-screen overflow-visible justify-around mobilesS:flex-col md:flex-row px-2 md:px-5 gap-5 xl:gap-10 py-5">
+    <div
+      id="awards"
+      className="flex align-top min-h-screen overflow-visible justify-around mobilesS:flex-col md:flex-row px-2 md:px-5 gap-5 xl:gap-10 py-5"
+    >
       <div className="md:sticky top-1/4 h-min mobilesS:static">
-        <div className="flex pt-32 pb-56 h-min mobilesS:justify-center md:basis-1 xl: items-center md:items-start flex-col text-center gap-1">
+        <div className="flex mobilesS:pb-5  h-min mobilesS:justify-center md:basis-1 xl:items-start md:items-start flex-col gap-1">
           <div className="flex justify-center  mobilesS:flex-row  mobilesS:text-4xl mobileL:text-5xl sm:text-7xl  lg:text-8xl xl:text-9xl">
             <p
               className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r ${
@@ -80,13 +83,6 @@ export default function Achievments2() {
             >
               AWARDS
             </p>
-            <p
-              className={`flex items-center font-Poppins  font-black ${
-                darkMode
-                  ? "text-black font-outline-2"
-                  : "text-white font-outline-3"
-              }`}
-            ></p>
           </div>
           <p className="text-white sm:text-2xl md:text-xl lg:text-[25px] md:text-start ">
             A front-end developer and designer with a proven track record in

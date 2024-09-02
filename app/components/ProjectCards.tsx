@@ -1,28 +1,30 @@
-import { ArrowUpRight, CalendarDays, Trophy } from "lucide-react";
+import { ArrowUpRight, CalendarDays, Info, Trophy } from "lucide-react";
 import { CustomAlertDialog } from "./reusable components/AlertDialog";
 import { CustomDialog } from "./reusable components/Dialog";
 
-type AchievmentCardsProps = {
+type ProjectCardsProps = {
   title: string;
   year: number;
   description: string;
   pic: string;
-  link: string;
+  link?: string;
   infoPics: string[];
-  aboutEvent: string;
+  aboutProject: string;
+  classname: string;
 };
 
-export default function AchievementsCards({
+export default function ProjectCards({
   title,
   year,
   description,
   pic,
   link,
   infoPics,
-  aboutEvent,
-}: AchievmentCardsProps) {
+  aboutProject,
+  classname,
+}: ProjectCardsProps) {
   return (
-    <div className="w-full h-full text-white flex items-center justify-center">
+    <div className="w-full h-full text-white flex items-center ">
       <div className="p-1  flex flex-col items-center justify-center gap-2 sm:items-start">
         <div className="h-1/2">
           <img
@@ -44,7 +46,7 @@ export default function AchievementsCards({
                 <p>{year}</p>
               </div>
               <div className="flex items-center gap-1">
-                <Trophy className="mobilesS:size-3 lg:size-4" />
+                <Info className="mobilesS:size-3 lg:size-4" />
                 <p>{description}</p>
               </div>
             </div>
@@ -59,8 +61,9 @@ export default function AchievementsCards({
             trigger="More"
             description={`${description}`}
             images={infoPics}
-            aboutInfo={`${aboutEvent}`}
+            aboutInfo={`${aboutProject}`}
             year={year}
+            classname={`${classname}`}
           />
           {/* <a
             href={`${link}`}
@@ -69,13 +72,6 @@ export default function AchievementsCards({
             View Post
             <ArrowUpRight className="mobilesS:size-5 lg:size-6" />
           </a> */}
-          <CustomAlertDialog
-            link={`${link}`}
-            redirectSite="Facebook"
-            icon={<ArrowUpRight className="mobilesS:size-5 lg:size-6" />}
-            trigger="View Post"
-            title="Confirm Redirection"
-          />
         </div>
       </div>
     </div>

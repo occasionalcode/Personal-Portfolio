@@ -135,6 +135,11 @@
     }
   }
 
+
+html, body{
+  scroll-behavior: smooth;
+}
+
   /* styles.css */
 @keyframes bounce {
   0% {
