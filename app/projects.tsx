@@ -66,7 +66,7 @@ export default function Projects() {
       title: "ANIMAFLIX",
       year: 2023,
       description: "1st Place In The Philippine Startup Challenge",
-      pic: "/projects/netflix.png",
+      pic: "/projects/animaflix.png",
       link: "https://www.facebook.com/share/p/2UqeZyHzdC3rvi4Q/",
       infoPics: [
         "/projects/animaflix/1.png",
