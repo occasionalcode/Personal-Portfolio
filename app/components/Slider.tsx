@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";
+import Image from "next/image";
 
 export default function Slider({ items }: { items: string[] }) {
   return (
@@ -34,7 +35,7 @@ export default function Slider({ items }: { items: string[] }) {
         {items.map((item, i) => {
           return (
             <SwiperSlide className="swiper-slide2" key={i}>
-              <img src={item} />
+              <Image width={1000} height={1000} src={item} alt={item} />
             </SwiperSlide>
           );
         })}

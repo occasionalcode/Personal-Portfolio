@@ -1,4 +1,4 @@
-import { ArrowDown, CalendarDays, Copy, Trophy } from "lucide-react";
+import { ArrowDown, CalendarDays, Copy, Info, Trophy } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -15,6 +15,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type CustomDialog = {
   trigger: string;
@@ -50,7 +51,7 @@ export function CustomDialog({
       }}
     >
       <DialogTrigger asChild>
-        <button className="border-2 border-white mobilesS:h-full mobilesS:w-full mobilesS:px-2 mobilesS:py-1 sm:py-3 md:py-2 rounded-sm">
+        <button className="hover:bg-gray-900 border-2 border-white mobilesS:h-full mobilesS:w-full mobilesS:px-2 mobilesS:py-1 sm:py-3 md:py-2 rounded-sm">
           {trigger}
         </button>
       </DialogTrigger>
@@ -78,7 +79,9 @@ export function CustomDialog({
               {images?.map((image, i) => {
                 return (
                   <div key={i} className="break-inside-avoid">
-                    <img
+                    <Image
+                      width={1000}
+                      height={1000}
                       className="object-cover w-full"
                       key={i}
                       src={`${image}`}
@@ -116,7 +119,7 @@ export function CustomDialog({
                   <p>{year}</p>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Trophy className="mobilesS:size-4 lg:size-6" />
+                  <Info className="mobilesS:size-4 lg:size-6" />
                   <p>{description}</p>
                 </div>
               </div>

@@ -33,7 +33,7 @@ export function CustomAlertDialog({
     <AlertDialog>
       <AlertDialogTrigger asChild>
         {icon ? (
-          <button className="bg-red-600 mobilesS:h-full mobilesS:px-2 mobilesS:w-full mobilesS:py-1.5 sm:py-3 md:py-2.5 rounded flex  justify-center items-center gap-2">
+          <button className="bg-red-600 hover:bg-red-700 mobilesS:h-full mobilesS:px-2 mobilesS:w-full mobilesS:py-1.5 sm:py-3 md:py-2.5 rounded flex  justify-center items-center gap-2">
             {trigger}
             {icon}
           </button>

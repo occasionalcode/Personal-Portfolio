@@ -11,6 +11,7 @@ import "swiper/css/effect-cards";
 
 // import required modules
 import { Autoplay, EffectCards } from "swiper/modules";
+import Image from "next/image";
 
 export default function SliderCards({ items }: { items: string[] }) {
   return (
@@ -28,7 +29,7 @@ export default function SliderCards({ items }: { items: string[] }) {
         {items.map((item, i) => {
           return (
             <SwiperSlide key={i}>
-              <img src={item} alt="" />
+              <Image width={1000} height={1000} src={item} alt="" />
             </SwiperSlide>
           );
         })}

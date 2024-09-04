@@ -19,8 +19,8 @@ export default function Projects() {
   const projects = [
     {
       title: "HEMALENS",
-      year: 2024,
-      description: "A Novel Mobile App that detects and count Blood Cells",
+      year: 2023,
+      description: "A novel app that detects and counts blood cells",
       pic: "/projects/Hemalens.png",
       link: "https://www.facebook.com/share/yNGf6ybWQmMj7KwG/",
       infoPics: [
@@ -64,8 +64,8 @@ export default function Projects() {
     },
     {
       title: "ANIMAFLIX",
-      year: 2023,
-      description: "1st Place In The Philippine Startup Challenge",
+      year: 2024,
+      description: "A site for anime, manga, and movies.",
       pic: "/projects/animaflix.png",
       link: "https://www.facebook.com/share/p/2UqeZyHzdC3rvi4Q/",
       infoPics: [

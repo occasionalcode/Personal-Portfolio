@@ -1,6 +1,7 @@
 import { ArrowUpRight, CalendarDays, Trophy } from "lucide-react";
 import { CustomAlertDialog } from "./reusable components/AlertDialog";
 import { CustomDialog } from "./reusable components/Dialog";
+import Image from "next/image";
 
 type AchievmentCardsProps = {
   title: string;
@@ -25,8 +26,10 @@ export default function AchievementsCards({
     <div className="w-full h-full text-white flex items-center justify-center">
       <div className="p-1  flex flex-col items-center justify-center gap-2 sm:items-start">
         <div className="h-1/2">
-          <img
-            className="object-cover object-top mobilesS:h-52 mobileL:h-56 sm:h-96 mobilesS:aspect-[5/2] rounded-2xl"
+          <Image
+            width={1000}
+            height={1000}
+            className="size-full w-full object-cover object-top mobilesS:h-52 mobileL:h-56 sm:h-96 mobilesS:aspect-[5/2] rounded-2xl"
             src={`${pic}`}
             alt={`${title}`}
           />
