@@ -4,6 +4,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Wave from "react-wavify";
 import { useDarkmode } from "./stores/globalStates";
 import Balls from "./components/reusable components/Balls";
+import Link from "next/link";
 
 export default function Hero() {
   const darkMode = useDarkmode((state) => state.darkMode);
@@ -71,11 +72,13 @@ export default function Hero() {
           }}
         ></Wave>
 
-        <div className="absolute mobilesS:left-5 mobilesS:bottom-5 xl:left-16 xl:bottom-14">
-          <Avatar className="mobilesS:size-8 sm:size-10 xl:size-16">
-            <AvatarImage src="https://github.com/shadcn.png" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
+        <div className="absolute mobilesS:left-5 mobilesS:bottom-5 xl:left-16 xl:bottom-14 z-50">
+          <Link href={"https://github.com/occasionalcode"} target="_blank">
+            <Avatar className="mobilesS:size-8 sm:size-10 xl:size-16">
+              <AvatarImage src="https://avatars.githubusercontent.com/u/89623797?s=400&u=9dc586432f9957f1d44f5d78f611c067aab3b360&v=4" />
+              <AvatarFallback>CN</AvatarFallback>
+            </Avatar>
+          </Link>
         </div>
         <div className="flex flex-col">
           <div>

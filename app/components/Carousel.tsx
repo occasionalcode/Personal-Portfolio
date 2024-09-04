@@ -52,6 +52,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Image from "next/image";
 
 export function CarouselHorizontal({ items }: { items: string[] }) {
   return (
@@ -65,7 +66,13 @@ export function CarouselHorizontal({ items }: { items: string[] }) {
             <CarouselItem key={index} className=" md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <div className="h-1/2">
-                  <img className="object-contain h-full" src={item} alt="" />
+                  <Image
+                    width={1000}
+                    height={1000}
+                    className="object-contain h-full"
+                    src={item}
+                    alt=""
+                  />
                 </div>
               </div>
             </CarouselItem>

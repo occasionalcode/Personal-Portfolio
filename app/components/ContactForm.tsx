@@ -72,7 +72,7 @@ export function ContactForm() {
                 <FormLabel>First Name</FormLabel>
                 <FormControl>
                   <Input
-                    className="text-black"
+                    className="bg-gray-950 text-white border-transparent"
                     placeholder="Enter Here"
                     {...field}
                   />
@@ -90,7 +90,7 @@ export function ContactForm() {
                 <FormLabel>Work Email</FormLabel>
                 <FormControl>
                   <Input
-                    className="text-black"
+                    className=" bg-gray-950 text-white border-transparent"
                     placeholder="Enter Here"
                     {...field}
                   />
@@ -107,7 +107,7 @@ export function ContactForm() {
                 <FormLabel>Message</FormLabel>
                 <FormControl>
                   <Textarea
-                    className="text-black text-wrap h-32"
+                    className=" text-wrap h-32 bg-gray-950 text-white border-transparent"
                     placeholder="Enter Here"
                     {...field}
                   />
