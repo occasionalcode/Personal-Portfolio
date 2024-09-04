@@ -67,9 +67,7 @@
       --ring: 212.7 26.8% 83.9%;
     }
   }
-  html, body {
-    overflow-x: hidden;
-  }
+
   .border-gradient-rounded {
     /* Border */
     border: 2px solid transparent;
@@ -84,7 +82,8 @@
 
 @layer utilities {
   ::-webkit-scrollbar {
-    width: 15px;
+    width: 3px;
+
   }
 
   ::-webkit-scrollbar-track,
@@ -135,6 +134,11 @@
       @apply bg-background text-foreground;
     }
   }
+
+
+html, body{
+  scroll-behavior: smooth;
+}
 
   /* styles.css */
 @keyframes bounce {

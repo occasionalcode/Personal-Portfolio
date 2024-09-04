@@ -1,12 +1,27 @@
 import Image from "next/image";
 import Hero from "./hero";
 import About from "./about";
+import SampleCertificates from "./SAMPLEcertificates";
+import SampleAchievments from "./SAMPLEachievements";
+import Certificates from "./certificates";
+import Achievments from "./achievements";
+import Achievments2 from "./achievements2";
+import StickyTest from "./demo";
+import Projects from "./projects";
+import ContactMe from "./contactMe";
+import Socials from "./Socials";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex flex-col gap-16 w-full lg:gap-32 mb-32">
       <Hero />
-      {/* <About /> */}
+      <About />
+
+      <Certificates />
+      <Achievments2 />
+      <Projects />
+      <ContactMe />
+      <Socials />
     </main>
   );
 }

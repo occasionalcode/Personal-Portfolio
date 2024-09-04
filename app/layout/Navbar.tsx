@@ -1,7 +1,9 @@
 "use client";
 import {
+  Award,
   BookUser,
   FolderKanbanIcon,
+  HomeIcon,
   Info,
   Moon,
   MoonStarIcon,
@@ -20,6 +22,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import { goToSection } from "@/lib/utils";
 
 const Navbar = () => {
   const darkmode = useDarkmode((state) => state.darkMode);
@@ -30,16 +33,33 @@ const Navbar = () => {
   };
 
   return (
-    <div className="w-screen sticky top-5 flex justify-center z-30 ">
-      <ul className="bg-navbarGrey1 w-72 h-10 absolute flex flex-row justify-evenly rounded-2xl mobilesS:hidden sm:flex ">
-        <li className="bg-navbarGrey1 w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
-          <BookUser size={25} />
+    <div className="w-full sticky top-5 flex justify-center z-30 ">
+      <ul className="border-[0.5px] border-white text-white bg-black backdrop-blur-sm bg-opacity-55 w-72 h-10 absolute flex flex-row justify-evenly rounded-2xl mobilesS:hidden sm:flex ">
+        <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
+          <button onClick={() => goToSection("home")}>
+            <HomeIcon size={25} />
+          </button>
         </li>
-        <li className="bg-navbarGrey2 w-full flex justify-center items-center">
-          <FolderKanbanIcon size={25} />
+        <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
+          <button onClick={() => goToSection("about")}>
+            <BookUser size={25} />
+          </button>
         </li>
-        <li className="bg-navbarGrey3 w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-tl-none rounded-bl-none">
-          <Phone size={25} />
+        <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
+          <button onClick={() => goToSection("awards")}>
+            <Award size={25} />
+          </button>
+        </li>
+        <li className=" w-full flex justify-center items-center">
+          <button onClick={() => goToSection("projects")}>
+            <FolderKanbanIcon size={25} />
+          </button>
+        </li>
+
+        <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-tl-none ">
+          <button onClick={() => goToSection("contact")}>
+            <Phone size={25} />
+          </button>
         </li>
       </ul>
       <ul className="sm:hidden text-navbarGrey1 w-72 h-10 absolute flex flex-row justify-evenly rounded-2xl">
@@ -48,19 +68,37 @@ const Navbar = () => {
             <Info />
           </PopoverTrigger>
           <PopoverContent className="flex flex-row bg-transparent h-10 w-72 items-center border-none mt-3 shadow-none">
-            <li className="bg-navbarGrey1 w-full h-10 flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
-              <BookUser size={25} />
-            </li>
-            <li className="bg-navbarGrey2 w-full h-10 flex justify-center items-center">
-              <FolderKanbanIcon size={25} />
-            </li>
-            <li className="bg-navbarGrey3 w-full h-10 flex justify-center items-center rounded-2xl  rounded-tl-none rounded-bl-none ">
-              <Phone size={25} />
-            </li>
+            <div className="border-[0.5px] border-white text-white bg-black backdrop-blur-sm bg-opacity-55 flex  w-full rounded-2xl">
+              <li className=" w-full h-10 flex justify-center items-center rounded-2xl rounded-tr-none ">
+                <button onClick={() => goToSection("home")}>
+                  <HomeIcon size={25} />
+                </button>
+              </li>
+              <li className=" w-full h-10 flex justify-center items-center rounded-2xl rounded-tr-none ">
+                <button onClick={() => goToSection("about")}>
+                  <BookUser size={25} />
+                </button>
+              </li>
+              <li className=" w-full h-10 flex justify-center items-center rounded-2xl rounded-tr-none ">
+                <button onClick={() => goToSection("awards")}>
+                  <Award size={25} />
+                </button>
+              </li>
+              <li className="w-full h-10 flex justify-center items-center">
+                <button onClick={() => goToSection("projects")}>
+                  <FolderKanbanIcon size={25} />
+                </button>
+              </li>
+              <li className="w-full h-10 flex justify-center items-center  ">
+                <button onClick={() => goToSection("contact")}>
+                  <Phone size={25} />
+                </button>
+              </li>
+            </div>
           </PopoverContent>
         </Popover>
       </ul>
-      <div className="group absolute items-center xl:right-36 mobilesS:right-5   flex justify-center">
+      {/* <div className="group absolute items-center xl:right-36 mobilesS:right-5   flex justify-center">
         <div className="z-50 flex items-center space-x-2 ">
           <Switch checked={darkmode} onCheckedChange={toggleDarkmode} />
           <Label
@@ -72,7 +110,7 @@ const Navbar = () => {
             {darkmode ? <MoonStarIcon className="text-white " /> : <Sun />}
           </Label>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
