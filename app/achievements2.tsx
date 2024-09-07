@@ -3,6 +3,23 @@ import { useEffect } from "react";
 
 import { CarouselVertical } from "./components/CarouselVertical";
 import AchievementsCards from "./components/AchievementCards";
+import mcits4 from "@/public/achievments/mcits pics/mcits4.jpg";
+import mcits1 from "@/public/achievments/mcits pics/mcits1.jpg";
+import mcits2 from "@/public/achievments/mcits pics/mcits2.jpg";
+import mcits3 from "@/public/achievments/mcits pics/mcits3.jpg";
+import mcitsLogo from "@/public/achievments/MCITS.png";
+
+import osra1 from "@/public/achievments/OSRA/osra1.jpg";
+import osra2 from "@/public/achievments/OSRA/osra2.jpg";
+import osra3 from "@/public/achievments/OSRA/osra3.jpg";
+import osra4 from "@/public/achievments/OSRA/osra4.jpg";
+import osraLogo from "@/public/achievments/OSRA.jpg";
+
+import dict1 from "@/public/achievments/dict/dict1.jpg";
+import dict3 from "@/public/achievments/dict/dict3.jpg";
+import dict4 from "@/public/achievments/dict/dict4.jpg";
+import dict5 from "@/public/achievments/dict/dict5.jpg";
+import dictLogo from "@/public/achievments/DICT.png";
 
 export default function Achievments2() {
   const achievements = [
@@ -10,49 +27,31 @@ export default function Achievments2() {
       title: "MINDANAO CONFERENCE FOR INFORMATION TECHNOLOGY STUDENTS",
       year: 2024,
       description: "PAPER PRESENTATION CHAMPION",
-      pic: "/achievments/MCITS.png",
+      pic: mcitsLogo,
       link: "https://www.facebook.com/share/yNGf6ybWQmMj7KwG/",
-      infoPics: [
-        "/achievments/mcits pics/mcits4.jpg",
-        "/achievments/mcits pics/mcits1.jpg",
-        "/achievments/mcits pics/mcits2.jpg",
-        "/achievments/mcits pics/mcits3.jpg",
-        "/achievments/MCITS.png",
-      ],
+      infoPics: [mcits4, mcits1, mcits2, mcits3, mcitsLogo],
       aboutEvent:
-        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT), is a prestigious competition that encourages innovation and entrepreneurship among students across the Philippines. Focused on identifying and nurturing promising startup ideas, the challenge brings together the most creative and driven minds to develop solutions that address real-world problems. Our project, HemaLens, was named the champion in the DICT Davao Region, standing out for its originality, technical excellence, and potential societal impact. Competing against other innovative startups, our team’s commitment to creating a meaningful solution earned us the top spot in this highly competitive event, reinforcing our belief in the transformative power of technology.",
+        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT)...",
     },
     {
       title: "MAPUA MALAYAN OUTSTANDING STUDENT RESEARCH AWARD",
       year: 2024,
       description: "CCIS RESEARCH POSTER PRESENTATION CHAMPION",
-      pic: "/achievments/OSRA.jpg",
+      pic: osraLogo,
       link: "https://www.facebook.com/share/eXN5RFN1xbwjh457/",
-      infoPics: [
-        "/achievments/OSRA/osra2.jpg",
-        "/achievments/OSRA/osra3.jpg",
-        "/achievments/OSRA/osra4.jpg",
-        "/achievments/OSRA.jpg",
-        "/achievments/OSRA/osra1.jpg",
-      ],
+      infoPics: [osra1, osra2, osra3, osra4, osraLogo],
       aboutEvent:
-        "The Outstanding Student Research Award (OSRA) at Mapúa Malayan Colleges Mindanao recognizes top-tier student research within the College of Computer and Information Sciences (CCIS). Our project, HemaLens, won the Best Poster Presentation, standing out among all participants. The combination of a visually engaging poster and a strong presentation secured our position as the top project in the competition, highlighting our dedication and innovation.",
+        "The Outstanding Student Research Award (OSRA) at Mapúa Malayan Colleges Mindanao...",
     },
     {
       title: "DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY",
       year: 2023,
       description: "1ST PLACE IN THE PHILIPPINE STARTUP CHALLENGE",
-      pic: "/achievments/DICT.png",
+      pic: dictLogo,
       link: "https://www.facebook.com/share/p/2UqeZyHzdC3rvi4Q/",
-      infoPics: [
-        "/achievments/dict/dict1.jpg",
-        "/achievments/dict/dict5.jpg",
-        "/achievments/dict/dict3.jpg",
-        "/achievments/dict/dict4.jpg",
-        "/achievments/DICT.png",
-      ],
+      infoPics: [dict1, dict3, dict4, dict5, dictLogo],
       aboutEvent:
-        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT), is a prestigious competition that encourages innovation and entrepreneurship among students across the Philippines. Focused on identifying and nurturing promising startup ideas, the challenge brings together the most creative and driven minds to develop solutions that address real-world problems. Our project, HemaLens, was named the champion in the DICT Davao Region, standing out for its originality, technical excellence, and potential societal impact. Competing against other innovative startups, our team’s commitment to creating a meaningful solution earned us the top spot in this highly competitive event, reinforcing our belief in the transformative power of technology.",
+        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT)...",
     },
   ];
 
@@ -87,7 +86,7 @@ export default function Achievments2() {
               title={item.title}
               year={item.year}
               description={`${item.description}`}
-              pic={`${item.pic}`}
+              pic={item.pic}
               link={`${item.link}`}
               infoPics={item.infoPics}
               aboutEvent={`${item.aboutEvent}`}
