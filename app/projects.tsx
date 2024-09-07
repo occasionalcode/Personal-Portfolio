@@ -4,6 +4,9 @@ import { useDarkmode } from "./stores/globalStates";
 import AchievementsCards from "./components/AchievementCards";
 import ProjectCards from "./components/ProjectCards";
 import { title } from "process";
+import StackIcon from "tech-stack-icons";
+import { TanstackQuery, Tensorflow, ZustandSVG } from "./assets/IconFunctions";
+import { globalTechstackSVG } from "./stores/globalVariables";
 
 export default function Projects() {
   const darkMode = useDarkmode((state) => state.darkMode);
@@ -25,7 +28,6 @@ export default function Projects() {
       link: "https://www.facebook.com/share/yNGf6ybWQmMj7KwG/",
       infoPics: [
         "/projects/hemalens/Splashscreen.png",
-
         "/projects/hemalens/Log In1.png",
         "/projects/hemalens/Log In.png",
         "/projects/hemalens/Camera.png",
@@ -35,6 +37,7 @@ export default function Projects() {
       aboutProject:
         "HemaLens is a machine learning application that analyzes, detects, and counts blood components, including platelets, RBCs, and the five WBC differentials, making hematology more accessible and affordable. The project addresses the challenges of manual blood cell counting and the high cost of hematology analyzers, especially in rural healthcare settings. I contributed to front-end development, UI/UX design, and training the machine learning model, ensuring both accuracy and a user-friendly experience. HemaLens has received recognition in various competitions, including the Philippine Startup Challenge by DICT, the Mindanao Conference for Information Technology Students (MCITS), and the Outstanding Student Research Awards 2024.",
       classname: "md:grid md:grid-cols-4 justify-end items-end",
+      techstack: ["Flutter", "Dart", "Tensorflow", "Figma"],
     },
     {
       title: "BLOCK'NFOCUS",
@@ -61,6 +64,7 @@ export default function Projects() {
       aboutProject:
         "BlockNFocus is a productivity tool designed to help users enhance focus and minimize distractions by blocking access to selected websites and apps during designated work periods. The application allows users to create customizable focus sessions, and if a user tries to unblock a site before the defined time, they must solve a randomized riddle and score above 70 percent to regain access. As a member of the development team, I contributed to the front-end development and UI/UX design.",
       classname: "md:grid md:grid-cols-4 justify-end items-end",
+      techstack: ["Python", "Canva"],
     },
     {
       title: "ANIMAFLIX",
@@ -79,6 +83,17 @@ export default function Projects() {
       aboutProject:
         "Animaflix is my personal project, created as a comprehensive platform where users can watch anime, read manga, and enjoy a wide selection of movies. The movie collection is not limited to anime; it also includes U.S. movies, offering a diverse range of content to cater to different tastes. Whether you're streaming the latest anime episodes, reading popular manga titles, or watching films from various genres, Animaflix provides a seamless and enjoyable experience for all entertainment enthusiasts.",
       classname: "md:grid md:grid-cols-2 justify-end items-end",
+      techstack: [
+        "ReactJS",
+        "Shadcn",
+        "HTML5",
+        "CSS3",
+        "Tailwind",
+        "Zustand",
+        "Framer",
+        "Postman",
+        "Tanstack Query",
+      ],
     },
     {
       title: "KBQS QUEUING SYSTEM",
@@ -100,6 +115,16 @@ export default function Projects() {
       aboutProject:
         "The KBQS (Kiosk-Based Queuing System) was a project developed for Telemondo Unicenters Company, aimed at optimizing customer service by providing an efficient queuing system that also accommodates appointments. The system was designed to reduce wait times and improve customer flow through user-friendly kiosks. I was responsible for implementing several screens provided by the UI/UX team",
       classname: "md:grid md:grid-cols-2 justify-end items-end",
+      techstack: [
+        "ReactJS",
+        "Shadcn",
+        "HTML5",
+        "CSS3",
+        "Tailwind",
+        "Zustand",
+        "Framer",
+        "Postman",
+      ],
     },
   ];
 
@@ -144,6 +169,7 @@ export default function Projects() {
                 infoPics={project.infoPics}
                 aboutProject={`${project.aboutProject}`}
                 classname={`${project.classname}`}
+                techStacks={project.techstack}
               />
             </div>
           );

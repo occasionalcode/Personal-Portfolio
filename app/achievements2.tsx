@@ -23,7 +23,7 @@ export default function Achievments2() {
       pic: "/achievments/MCITS.png",
       link: "https://www.facebook.com/share/yNGf6ybWQmMj7KwG/",
       infoPics: [
-        "https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/441072276_10228670395643434_4044342581230825833_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HxrNLl8_nP0Q7kNvgGoReOH&_nc_ht=scontent.fcgy1-1.fna&oh=00_AYB152MEYEdOAac_1ZkqkHnzlNq0oe_RRIpplIXOFSuaVg&oe=66D52FFF",
+        "/achievments/mcits pics/mcits4.jpg",
         "/achievments/mcits pics/mcits1.jpg",
         "/achievments/mcits pics/mcits2.jpg",
         "/achievments/mcits pics/mcits3.jpg",
