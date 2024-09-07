@@ -1,20 +1,10 @@
 "use client";
 import { useEffect } from "react";
-import { useDarkmode } from "./stores/globalStates";
+
 import { CarouselVertical } from "./components/CarouselVertical";
 import AchievementsCards from "./components/AchievementCards";
 
 export default function Achievments2() {
-  const darkMode = useDarkmode((state) => state.darkMode);
-  const isFading = useDarkmode((state) => state.isFading);
-  const UpdateIsFading = useDarkmode((state) => state.updateIsFading);
-
-  useEffect(() => {
-    UpdateIsFading();
-    const timer = setTimeout(() => UpdateIsFading(), 2000); // Duration of the fade animation
-    return () => clearTimeout(timer);
-  }, [darkMode]);
-
   const achievements = [
     {
       title: "MINDANAO CONFERENCE FOR INFORMATION TECHNOLOGY STUDENTS",
@@ -75,11 +65,9 @@ export default function Achievments2() {
         <div className="flex mobilesS:pb-5  h-min mobilesS:justify-center md:basis-1 xl:items-start md:items-start flex-col gap-1">
           <div className="flex justify-center  mobilesS:flex-row  mobilesS:text-4xl mobileL:text-5xl sm:text-7xl  lg:text-8xl xl:text-9xl">
             <p
-              className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r ${
-                darkMode
-                  ? "from-white via-[#545454] to-white"
-                  : "from-[#bcbcbc] via-[#282828] to-[#bcbcbc]"
-              } text-transparent`}
+              className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r 
+                
+                   from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
             >
               AWARDS
             </p>
@@ -90,7 +78,7 @@ export default function Achievments2() {
           </p>
         </div>
       </div>
-      {/* <CarouselVertical items={achievements} /> */}
+
       <div className="flex flex-col gap-20">
         {achievements.map((item, i) => {
           return (
