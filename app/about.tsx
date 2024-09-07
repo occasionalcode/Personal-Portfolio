@@ -8,7 +8,23 @@ import github from "./assets/github.png";
 import Image from "next/image";
 import { tools } from "./stores/tools";
 import StackIcon from "tech-stack-icons";
-import { RemixSVG, WebflowSVG } from "./assets/IconFunctions";
+import {
+  RemixSVG,
+  TanstackQuery,
+  Tensorflow,
+  VercelSVG,
+  WebflowSVG,
+  ZustandSVG,
+} from "./assets/IconFunctions";
+
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+
+import { globalTechstackSVG } from "./stores/globalVariables";
 
 export default function About() {
   const darkMode = useDarkmode((state) => state.darkMode);
@@ -65,21 +81,19 @@ export default function About() {
           <div className="w-full flex justify-center items-center sm:px-20 md:px-5 lg:px-14">
             <div className="border-gradient-rounded aspect-[18/18] w-full md:rounded-[2.5rem] mobilesS:rounded-3xl  ">
               <div className="flex flex-row justify-center items-center">
-                <div className="grid grid-cols-4  px-5 py-9 gap-y-5 gap-x-3 xl:gap-10 xl:px-11 sm:gap-5 items-start">
-                  <StackIcon name="python" />
-                  <StackIcon name="java" />
-                  <StackIcon name="dart" />
-                  <StackIcon name="flutter" />
-                  <StackIcon name="mysql" />
-                  <StackIcon name="js" />
-                  <StackIcon name="html5" />
-                  <StackIcon name="css3" />
-                  <StackIcon name="reactjs" />
-                  <StackIcon name="nextjs2" className="stroke-white" />
-                  <RemixSVG />
-                  <StackIcon name="shadcnui" className=" bg-white " />
-                  <WebflowSVG />
-                  <StackIcon name="github" className="stroke-white" />
+                <div className="grid grid-cols-5  px-5 py-9 gap-y-5 gap-x-3 xl:gap-10 xl:px-11 sm:gap-5 items-start">
+                  <TooltipProvider>
+                    {globalTechstackSVG.map((techstackIcon) => (
+                      <Tooltip>
+                        <TooltipTrigger>
+                          {techstackIcon.techIcon}
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{techstackIcon.iconName}</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    ))}
+                  </TooltipProvider>
                 </div>
               </div>
             </div>
