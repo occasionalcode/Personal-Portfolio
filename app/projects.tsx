@@ -10,8 +10,8 @@ import { globalTechstackSVG } from "./stores/globalVariables";
 // Importing all project images
 import hemalensPic from "@/public/projects/Hemalens.png";
 import hemalensSplashscreen from "@/public/projects/hemalens/Splashscreen.png";
-import hemalensLogin1 from "@/public/projects/hemalens/Log In1.png";
-import hemalensLogin from "@/public/projects/hemalens/Log In.png";
+import hemalensLogin1 from "@/public/projects/hemalens/Login1.png";
+import hemalensLogin from "@/public/projects/hemalens/Login.png";
 import hemalensCamera from "@/public/projects/hemalens/Camera.png";
 import hemalensSwipeResult from "@/public/projects/hemalens/Swipe Result.png";
 import hemalensSwipeResult2 from "@/public/projects/hemalens/Swipe Result2.png";
