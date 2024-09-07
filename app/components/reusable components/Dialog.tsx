@@ -1,4 +1,12 @@
-import { ArrowDown, CalendarDays, Copy, Info, Trophy } from "lucide-react";
+import {
+  ArrowDown,
+  CalendarDays,
+  Copy,
+  Divide,
+  icons,
+  Info,
+  Trophy,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,11 +21,18 @@ import {
 } from "@/components/ui/dialogAchievements";
 
 import { Label } from "@/components/ui/label";
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { globalTechstackSVG } from "@/app/stores/globalVariables";
 
-type CustomDialog = {
+type CustomDialogProps = {
   trigger: string;
   images?: string[];
   title: string;
@@ -25,6 +40,7 @@ type CustomDialog = {
   aboutInfo: string;
   year: number;
   classname?: string;
+  techStacks?: string[];
 };
 
 export function CustomDialog({
@@ -35,7 +51,8 @@ export function CustomDialog({
   aboutInfo,
   year,
   classname,
-}: CustomDialog) {
+  techStacks,
+}: CustomDialogProps) {
   const [expand, setExpand] = useState(false);
 
   useEffect(() => {
@@ -111,7 +128,7 @@ export function CustomDialog({
             <p className="text-gray-300 mobilesS:text-sm md:text-base mobilesS:text-justify ">
               {aboutInfo}
             </p>
-            <div className="flex h-full gap-2 pt-2 mobilesS:text-xs md:text-sm pb-20">
+            <div className="flex h-full gap-2 pt-2 mobilesS:text-xs md:text-sm">
               <div className=" w-1 rounded-lg bg-white" />
               <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-1">
@@ -124,7 +141,28 @@ export function CustomDialog({
                 </div>
               </div>
             </div>
-            <DialogFooter className="sm:justify-start">
+            {techStacks && (
+              <div className="flex flex-col gap-3 mobilesS:text-xs md:text-sm w-full pt-5">
+                <p>Techstacks:</p>
+                <div className="flex gap-3 flex-wrap">
+                  <TooltipProvider>
+                    {techStacks?.map((iconName, i) => (
+                      <Tooltip>
+                        <TooltipTrigger key={i} className="size-10">
+                          {
+                            globalTechstackSVG.find(
+                              (i) => i.iconName === iconName
+                            )?.techIcon
+                          }
+                        </TooltipTrigger>
+                        <TooltipContent>{iconName}</TooltipContent>
+                      </Tooltip>
+                    ))}
+                  </TooltipProvider>
+                </div>
+              </div>
+            )}
+            <DialogFooter className="sm:justify-start pt-20">
               <DialogClose asChild>
                 <Button type="button" variant="secondary">
                   Close

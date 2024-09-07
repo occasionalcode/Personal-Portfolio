@@ -2,6 +2,7 @@ import { ArrowUpRight, CalendarDays, Info, Trophy } from "lucide-react";
 import { CustomAlertDialog } from "./reusable components/AlertDialog";
 import { CustomDialog } from "./reusable components/Dialog";
 import Image from "next/image";
+import { JSXElementConstructor, ReactElement } from "react";
 
 type ProjectCardsProps = {
   title: string;
@@ -12,6 +13,7 @@ type ProjectCardsProps = {
   infoPics: string[];
   aboutProject: string;
   classname: string;
+  techStacks: string[];
 };
 
 export default function ProjectCards({
@@ -23,6 +25,7 @@ export default function ProjectCards({
   infoPics,
   aboutProject,
   classname,
+  techStacks,
 }: ProjectCardsProps) {
   return (
     <div className="w-full h-full text-white flex items-center ">
@@ -31,7 +34,7 @@ export default function ProjectCards({
           <Image
             width={1000}
             height={1000}
-            className="object-cover object-top mobilesS:h-52 mobileL:h-56 sm:h-96 mobilesS:aspect-[5/2] rounded-2xl"
+            className="object-cover object-center mobilesS:h-52 mobileL:h-56 sm:h-96 mobilesS:aspect-[5/2] rounded-2xl"
             src={`${pic}`}
             alt={`${title}`}
           />
@@ -68,6 +71,7 @@ export default function ProjectCards({
               aboutInfo={`${aboutProject}`}
               year={year}
               classname={`${classname}`}
+              techStacks={techStacks}
             />
           </div>
           {/* <a
