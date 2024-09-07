@@ -23,7 +23,7 @@ import {
 import { Label } from "@/components/ui/label";
 import { ReactElement, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import {
   Tooltip,
   TooltipContent,
@@ -34,7 +34,7 @@ import { globalTechstackSVG } from "@/app/stores/globalVariables";
 
 type CustomDialogProps = {
   trigger: string;
-  images?: string[];
+  images?: StaticImageData[];
   title: string;
   description: string;
   aboutInfo: string;
@@ -100,8 +100,9 @@ export function CustomDialog({
                       width={1000}
                       height={1000}
                       className="object-cover w-full"
+                      placeholder="blur"
                       key={i}
-                      src={`${image}`}
+                      src={image}
                       alt={title}
                     />
                   </div>
@@ -147,7 +148,7 @@ export function CustomDialog({
                 <div className="flex gap-3 flex-wrap">
                   <TooltipProvider>
                     {techStacks?.map((iconName, i) => (
-                      <Tooltip>
+                      <Tooltip key={i}>
                         <TooltipTrigger key={i} className="size-10">
                           {
                             globalTechstackSVG.find(
