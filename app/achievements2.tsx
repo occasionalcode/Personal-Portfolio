@@ -31,7 +31,7 @@ export default function Achievments2() {
       link: "https://www.facebook.com/share/yNGf6ybWQmMj7KwG/",
       infoPics: [mcits4, mcits1, mcits2, mcits3, mcitsLogo],
       aboutEvent:
-        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT)...",
+        "The Mindanao Conference for Information Technology Students (MCITS) is a prestigious event that brings together the brightest IT students from across the region to present innovative projects and research. Hosted by Mapúa Malayan Colleges Mindanao, it provides a platform for students to share their work with industry experts, faculty, and fellow students. Our project, HemaLens, earned the championship at MCITS, distinguishing itself with its innovation and potential impact. Competing against the top projects in the region, we were honored as the best entry, highlighting the dedication, creativity, and expertise of our team.",
     },
     {
       title: "MAPUA MALAYAN OUTSTANDING STUDENT RESEARCH AWARD",
@@ -41,7 +41,7 @@ export default function Achievments2() {
       link: "https://www.facebook.com/share/eXN5RFN1xbwjh457/",
       infoPics: [osra1, osra2, osra3, osra4, osraLogo],
       aboutEvent:
-        "The Outstanding Student Research Award (OSRA) at Mapúa Malayan Colleges Mindanao...",
+        "The Outstanding Student Research Award (OSRA) at Mapúa Malayan Colleges Mindanao recognizes top-tier student research within the College of Computer and Information Sciences (CCIS). Our project, HemaLens, won the Best Poster Presentation, standing out among all participants. The combination of a visually engaging poster and a strong presentation secured our position as the top project in the competition, highlighting our dedication and innovation.",
     },
     {
       title: "DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY",
@@ -51,7 +51,7 @@ export default function Achievments2() {
       link: "https://www.facebook.com/share/p/2UqeZyHzdC3rvi4Q/",
       infoPics: [dict1, dict3, dict4, dict5, dictLogo],
       aboutEvent:
-        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT)...",
+        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT), is a prestigious competition that encourages innovation and entrepreneurship among students across the Philippines. Focused on identifying and nurturing promising startup ideas, the challenge brings together the most creative and driven minds to develop solutions that address real-world problems. Our project, HemaLens, was named the first place in the DICT Davao Region, standing out for its originality, technical excellence, and potential societal impact. Competing against other innovative startups, our team’s commitment to creating a meaningful solution earned us the top spot in this highly competitive event, reinforcing our belief in the transformative power of technology.",
     },
   ];
 
