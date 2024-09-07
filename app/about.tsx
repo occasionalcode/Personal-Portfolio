@@ -59,8 +59,8 @@ export default function About() {
             <div className="flex flex-row justify-center items-center">
               <div className="grid grid-cols-5  px-5 py-9 gap-y-5 gap-x-3 xl:gap-10 xl:px-11 sm:gap-5 items-start">
                 <TooltipProvider>
-                  {globalTechstackSVG.map((techstackIcon) => (
-                    <Tooltip>
+                  {globalTechstackSVG.map((techstackIcon, i) => (
+                    <Tooltip key={i}>
                       <TooltipTrigger>{techstackIcon.techIcon}</TooltipTrigger>
                       <TooltipContent>
                         <p>{techstackIcon.iconName}</p>

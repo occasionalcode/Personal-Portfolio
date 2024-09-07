@@ -2,15 +2,15 @@
 import { Carousel } from "@/components/ui/carousel";
 import { CarouselHorizontal } from "./components/Carousel";
 
+import telemondoCert from "@/public/certificates/Telemondo.jpg";
+import cert1 from "@/public/certificates/cert1.png";
+import cert2 from "@/public/certificates/cert2.png";
+import cert3 from "@/public/certificates/cert3.png";
+import cert4 from "@/public/certificates/cert4.png";
+import cert5 from "@/public/certificates/cert5.png";
+
 export default function Certificates() {
-  const certs = [
-    "/certificates/Telemondo.jpg",
-    "/certificates/cert1.png",
-    "/certificates/cert2.png",
-    "/certificates/cert3.png",
-    "/certificates/cert4.png",
-    "/certificates/cert5.png",
-  ];
+  const certs = [telemondoCert, cert1, cert2, cert3, cert4, cert5];
   return (
     <div className=" flex justify-start flex-col mobilesS:items-center  lg:items-center w-full py-10 gap-8 px-5">
       <div className="flex lg:justify-start mobilesS:justify-center mobilesS:items-center">

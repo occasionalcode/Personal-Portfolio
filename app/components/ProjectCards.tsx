@@ -1,16 +1,16 @@
 import { ArrowUpRight, CalendarDays, Info, Trophy } from "lucide-react";
 import { CustomAlertDialog } from "./reusable components/AlertDialog";
 import { CustomDialog } from "./reusable components/Dialog";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { JSXElementConstructor, ReactElement } from "react";
 
 type ProjectCardsProps = {
   title: string;
   year: number;
   description: string;
-  pic: string;
+  pic: StaticImageData;
   link?: string;
-  infoPics: string[];
+  infoPics: StaticImageData[];
   aboutProject: string;
   classname: string;
   techStacks: string[];
@@ -32,10 +32,11 @@ export default function ProjectCards({
       <div className="p-1  flex flex-col items-center justify-between gap-2 sm:items-start">
         <div className="h-1/2">
           <Image
+            placeholder="blur"
             width={1000}
             height={1000}
             className="object-cover object-center mobilesS:h-52 mobileL:h-56 sm:h-96 mobilesS:aspect-[5/2] rounded-2xl"
-            src={`${pic}`}
+            src={pic}
             alt={`${title}`}
           />
         </div>

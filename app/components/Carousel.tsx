@@ -52,9 +52,9 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
-export function CarouselHorizontal({ items }: { items: string[] }) {
+export function CarouselHorizontal({ items }: { items: StaticImageData[] }) {
   return (
     <Carousel
       opts={{ align: "start", loop: true }}
@@ -67,6 +67,7 @@ export function CarouselHorizontal({ items }: { items: string[] }) {
               <div className="p-1">
                 <div className="h-1/2">
                   <Image
+                    placeholder="blur"
                     width={1000}
                     height={1000}
                     className="object-contain h-full"

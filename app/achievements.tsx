@@ -3,6 +3,23 @@ import { useEffect } from "react";
 import { useDarkmode } from "./stores/globalStates";
 import { CarouselVertical } from "./components/CarouselVertical";
 import AchievementsCards from "./components/AchievementCards";
+import mcits4 from "@/public/achievments/mcits pics/mcits4.jpg";
+import mcits1 from "@/public/achievments/mcits pics/mcits1.jpg";
+import mcits2 from "@/public/achievments/mcits pics/mcits2.jpg";
+import mcits3 from "@/public/achievments/mcits pics/mcits3.jpg";
+import mcitsLogo from "@/public/achievments/MCITS.png";
+
+import osra1 from "@/public/achievments/OSRA/osra1.jpg";
+import osra2 from "@/public/achievments/OSRA/osra2.jpg";
+import osra3 from "@/public/achievments/OSRA/osra3.jpg";
+import osra4 from "@/public/achievments/OSRA/osra4.jpg";
+import osraLogo from "@/public/achievments/OSRA.jpg";
+
+import dict1 from "@/public/achievments/dict/dict1.jpg";
+import dict3 from "@/public/achievments/dict/dict3.jpg";
+import dict4 from "@/public/achievments/dict/dict4.jpg";
+import dict5 from "@/public/achievments/dict/dict5.jpg";
+import dictLogo from "@/public/achievments/DICT.png";
 
 export default function Achievments() {
   const darkMode = useDarkmode((state) => state.darkMode);
@@ -17,40 +34,34 @@ export default function Achievments() {
 
   const achievements = [
     {
+      title: "MINDANAO CONFERENCE FOR INFORMATION TECHNOLOGY STUDENTS",
+      year: 2024,
+      description: "PAPER PRESENTATION CHAMPION",
+      pic: mcitsLogo,
+      link: "https://www.facebook.com/share/yNGf6ybWQmMj7KwG/",
+      infoPics: [mcits4, mcits1, mcits2, mcits3, mcitsLogo],
+      aboutEvent:
+        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT)...",
+    },
+    {
       title: "MAPUA MALAYAN OUTSTANDING STUDENT RESEARCH AWARD",
       year: 2024,
       description: "CCIS RESEARCH POSTER PRESENTATION CHAMPION",
-      pic: "/achievments/OSRA.jpg",
+      pic: osraLogo,
       link: "https://www.facebook.com/share/eXN5RFN1xbwjh457/",
-      infoPics: [""],
+      infoPics: [osra1, osra2, osra3, osra4, osraLogo],
       aboutEvent:
-        "The Outstanding Student Research Award (OSRA) at Mapúa Malayan Colleges Mindanao recognizes top-tier student research within the College of Computer and Information Sciences (CCIS). Our project, HemaLens, won the Best Poster Presentation, standing out among all participants. The combination of a visually engaging poster and a strong presentation secured our position as the top project in the competition, highlighting our dedication and innovation.",
+        "The Outstanding Student Research Award (OSRA) at Mapúa Malayan Colleges Mindanao...",
     },
     {
       title: "DEPARTMENT OF INFORMATION AND COMMUNICATIONS TECHNOLOGY",
       year: 2023,
       description: "1ST PLACE IN THE PHILIPPINE STARTUP CHALLENGE",
-      pic: "/achievments/DICT.png",
+      pic: dictLogo,
       link: "https://www.facebook.com/share/p/2UqeZyHzdC3rvi4Q/",
-      infoPics: [""],
+      infoPics: [dict1, dict3, dict4, dict5, dictLogo],
       aboutEvent:
-        "  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? ",
-    },
-    {
-      title: "MINDANAO CONFERENCE FOR INFORMATION TECHNOLOGY STUDENTS",
-      year: 2024,
-      description: "RESEARCH PRESENTATION CHAMPION",
-      pic: "/achievments/MCITS.png",
-      link: "https://www.facebook.com/share/yNGf6ybWQmMj7KwG/",
-      infoPics: [
-        "https://scontent.fcgy1-1.fna.fbcdn.net/v/t39.30808-6/441072276_10228670395643434_4044342581230825833_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HxrNLl8_nP0Q7kNvgGoReOH&_nc_ht=scontent.fcgy1-1.fna&oh=00_AYB152MEYEdOAac_1ZkqkHnzlNq0oe_RRIpplIXOFSuaVg&oe=66D52FFF",
-        "/achievments/mcits pics/mcits1.jpg",
-        "/achievments/mcits pics/mcits2.jpg",
-        "/achievments/mcits pics/mcits3.jpg",
-        "/achievments/MCITS.png",
-      ],
-      aboutEvent:
-        "  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? ",
+        "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT)...",
     },
   ];
 
