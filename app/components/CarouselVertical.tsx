@@ -10,14 +10,15 @@ import {
 } from "@/components/ui/carouselVertical";
 import Achievments from "../achievements";
 import AchievementsCards from "./AchievementCards";
+import { StaticImageData } from "next/image";
 
 type CarouselVerticalProps = {
   title: string;
   year: number;
   description: string;
-  pic: string;
+  pic: StaticImageData;
   link: string;
-  infoPics: string[];
+  infoPics: StaticImageData[];
   aboutEvent: string;
 };
 
@@ -40,7 +41,7 @@ export function CarouselVertical({ items }: ItemsProps) {
                 title={item.title}
                 year={item.year}
                 description={`${item.description}`}
-                pic={`${item.pic}`}
+                pic={item.pic}
                 link={`${item.link}`}
                 infoPics={item.infoPics}
                 aboutEvent={`${item.aboutEvent}`}
