@@ -5,7 +5,7 @@ export default function Socials() {
   return (
     <div className="w-full mobilesS:px-5 md:pr-10 lg:pr-32 xl:pr-40 flex flex-col gap-5 lg:text-xl ">
       <div className="text-white w-full flex  justify-end mobilesS:flex-col-reverse md:flex-row-reverse   mobilesS:items-start md:items-center mobilesS:gap-2 md:gap-10">
-        <p>gabrielibanez50@gmail.com</p>
+        <p>+63 923 700 3403</p>
         <ArrowRightCircle className="mobilesS:hidden md:flex" />
         <div className="flex justify-center mobilesS:items-center  md:gap-1   md:items-start mobilesS:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
           <p

@@ -1,24 +1,13 @@
 "use client";
 import { useEffect } from "react";
-import { useDarkmode } from "./stores/globalStates";
 import AchievementsCards from "./components/AchievementCards";
 import ProjectCards from "./components/ProjectCards";
 import { title } from "process";
 import StackIcon from "tech-stack-icons";
-import { TanstackQuery, Tensorflow, ZustandSVG } from "./assets/IconFunctions";
+
 import { globalTechstackSVG } from "./stores/globalVariables";
 
 export default function Projects() {
-  const darkMode = useDarkmode((state) => state.darkMode);
-  const isFading = useDarkmode((state) => state.isFading);
-  const UpdateIsFading = useDarkmode((state) => state.updateIsFading);
-
-  useEffect(() => {
-    UpdateIsFading();
-    const timer = setTimeout(() => UpdateIsFading(), 2000); // Duration of the fade animation
-    return () => clearTimeout(timer);
-  }, [darkMode]);
-
   const projects = [
     {
       title: "HEMALENS",
@@ -133,20 +122,12 @@ export default function Projects() {
       <div className="flex justify-center items-center flex-col">
         <div className="flex justify-center   mobilesS:flex-row  mobilesS:text-4xl mobileL:text-5xl sm:text-7xl  lg:text-8xl xl:text-9xl">
           <p
-            className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r ${
-              darkMode
-                ? "from-white via-[#545454] to-white"
-                : "from-[#bcbcbc] via-[#282828] to-[#bcbcbc]"
-            } text-transparent`}
+            className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r from-white via-[#545454] to-white text-transparent`}
           >
             PRO
           </p>
           <p
-            className={`flex items-center font-Poppins  font-black ${
-              darkMode
-                ? "text-black font-outline-2"
-                : "text-white font-outline-3"
-            }`}
+            className={`flex items-center font-Poppins  font-black text-black font-outline-2`}
           >
             JECTS
           </p>

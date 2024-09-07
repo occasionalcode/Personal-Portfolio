@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Hero from "./hero";
 import About from "./about";
-import SampleCertificates from "./SAMPLEcertificates";
-import SampleAchievments from "./SAMPLEachievements";
+
 import Certificates from "./certificates";
 import Achievments from "./achievements";
 import Achievments2 from "./achievements2";

@@ -12,8 +12,7 @@ import {
   SunDim,
 } from "lucide-react";
 import React from "react";
-// import { Switch } from "@/components/ui/switch";
-import { useDarkmode } from "../stores/globalStates";
+
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 
@@ -25,13 +24,6 @@ import {
 import { goToSection } from "@/lib/utils";
 
 const Navbar = () => {
-  const darkmode = useDarkmode((state) => state.darkMode);
-  const updateDarkMode = useDarkmode((state) => state.updateDarkMode);
-  // const test = true;
-  const toggleDarkmode = () => {
-    updateDarkMode();
-  };
-
   return (
     <div className="w-full sticky top-5 flex justify-center z-30 ">
       <ul className="border-[0.5px] border-white text-white bg-black backdrop-blur-sm bg-opacity-55 w-72 h-10 absolute flex flex-row justify-evenly rounded-2xl mobilesS:hidden sm:flex ">
@@ -98,19 +90,6 @@ const Navbar = () => {
           </PopoverContent>
         </Popover>
       </ul>
-      {/* <div className="group absolute items-center xl:right-36 mobilesS:right-5   flex justify-center">
-        <div className="z-50 flex items-center space-x-2 ">
-          <Switch checked={darkmode} onCheckedChange={toggleDarkmode} />
-          <Label
-            className={`transition-all group-hover:animate-spin-slow ${
-              darkmode ? "text-white" : "text-black"
-            }`}
-            htmlFor="airplane-mode"
-          >
-            {darkmode ? <MoonStarIcon className="text-white " /> : <Sun />}
-          </Label>
-        </div>
-      </div> */}
     </div>
   );
 };
