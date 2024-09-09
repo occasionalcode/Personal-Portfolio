@@ -14,7 +14,6 @@ export default function Home() {
     <main className="flex flex-col gap-16 w-full lg:gap-32 mb-32">
       <Hero />
       <About />
-
       <Certificates />
       <Achievments2 />
       <Projects />
