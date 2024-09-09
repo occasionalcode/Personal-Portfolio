@@ -7,6 +7,7 @@ import {
   TanstackQuery,
   VercelSVG,
 } from "../assets/IconFunctions";
+import React from "react";
 
 export const globalTechstackSVG = [
   { techIcon: <StackIcon name="python" />, iconName: "Python" },
