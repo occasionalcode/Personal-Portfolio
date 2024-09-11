@@ -5,6 +5,7 @@ import Wave from "react-wavify";
 
 import Balls from "./components/reusable components/Balls";
 import Link from "next/link";
+import { Download } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -52,12 +53,21 @@ export default function Hero() {
       ></Wave>
 
       <div className="absolute mobilesS:left-5 mobilesS:bottom-5 xl:left-16 xl:bottom-14 z-50">
-        <Link href={"https://github.com/occasionalcode"} target="_blank">
-          <Avatar className="mobilesS:size-8 sm:size-10 xl:size-16">
-            <AvatarImage src="https://avatars.githubusercontent.com/u/89623797?s=400&u=9dc586432f9957f1d44f5d78f611c067aab3b360&v=4" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-        </Link>
+        <a
+          href="/resume/Ibanez_Gabriel_Resume.pdf"
+          download={"Ibanez_Gabriel_Resume.pdf"}
+          className="mobilesS:hidden md:flex justify-center items-center  gap-3 px-5 py-2 rounded-md hover:bg-white hover:transition-all hover:ease-in-out hover:duration-500  hover:text-black  bg-transparent outline outline-white outline-2 text-white mobilesS:text-sm lg:text-base "
+        >
+          <Download />
+          <p>Download Resume</p>
+        </a>
+        <a
+          href="/resume/Ibanez_Gabriel_Resume.pdf"
+          download={"Ibanez_Gabriel_Resume.pdf"}
+          className="mobilesS:flex md:hidden  gap-3 px-2 py-1 rounded-md hover:bg-white hover:transition-all hover:ease-in-out hover:duration-500  hover:text-black  bg-transparent outline outline-white outline-2 text-white"
+        >
+          <Download />
+        </a>
       </div>
       <div className="flex flex-col">
         <div>
