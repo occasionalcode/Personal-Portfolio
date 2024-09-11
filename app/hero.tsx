@@ -54,10 +54,6 @@ export default function Hero() {
 
       <div className="absolute mobilesS:left-5 mobilesS:bottom-5 xl:left-16 xl:bottom-14 z-50">
         <Link href={"https://github.com/occasionalcode"} target="_blank">
-          {/* <Avatar className="mobilesS:size-8 sm:size-10 xl:size-16">
-            <AvatarImage src="https://avatars.githubusercontent.com/u/89623797?s=400&u=9dc586432f9957f1d44f5d78f611c067aab3b360&v=4" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar> */}
           <a
             href="/resume/Ibanez_Gabriel_Resume.pdf"
             download={"Ibanez_Gabriel_Resume.pdf"}
