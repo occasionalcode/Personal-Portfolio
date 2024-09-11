@@ -9,7 +9,11 @@ export default function Socials() {
         <ArrowRightCircle className="mobilesS:hidden md:flex" />
         <div className="flex justify-center mobilesS:items-center  md:gap-1   md:items-start mobilesS:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
           <p
-            className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
+            style={{
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+            className={`font-black items-center font-Montserrat flex  bg-gradient-to-r from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
           >
             PHO
           </p>
@@ -32,7 +36,11 @@ export default function Socials() {
           </p>
 
           <p
-            className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
+            style={{
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+            className={`font-black items-center font-Montserrat flex bg-gradient-to-r from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
           >
             MAIL
           </p>
@@ -70,7 +78,11 @@ export default function Socials() {
         <ArrowRightCircle className="mobilesS:hidden md:flex" />
         <div className="flex justify-center mobilesS:items-center  md:gap-1   md:items-start mobilesS:text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
           <p
-            className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
+            style={{
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+            className={`font-black items-center font-Montserrat flex  bg-gradient-to-r from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
           >
             SO
           </p>

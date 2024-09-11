@@ -49,7 +49,7 @@ export default function Achievments2() {
       description: "1ST PLACE IN THE PHILIPPINE STARTUP CHALLENGE",
       pic: dictLogo,
       link: "https://www.facebook.com/share/p/2UqeZyHzdC3rvi4Q/",
-      infoPics: [dict1, dict3, dict4, dict5, dictLogo],
+      infoPics: [dict1, dict5, dict3, dict4, dictLogo],
       aboutEvent:
         "The Philippine Startup Challenge, organized by the Department of Information and Communications Technology (DICT), is a prestigious competition that encourages innovation and entrepreneurship among students across the Philippines. Focused on identifying and nurturing promising startup ideas, the challenge brings together the most creative and driven minds to develop solutions that address real-world problems. Our project, HemaLens, was named the first place in the DICT Davao Region, standing out for its originality, technical excellence, and potential societal impact. Competing against other innovative startups, our team’s commitment to creating a meaningful solution earned us the top spot in this highly competitive event, reinforcing our belief in the transformative power of technology.",
     },
@@ -64,7 +64,11 @@ export default function Achievments2() {
         <div className="flex mobilesS:pb-5  h-min mobilesS:justify-center md:basis-1 xl:items-start md:items-start flex-col gap-1">
           <div className="flex justify-center  mobilesS:flex-row  mobilesS:text-4xl mobileL:text-5xl sm:text-7xl  lg:text-8xl xl:text-9xl">
             <p
-              className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r 
+              style={{
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+              className={`font-black items-center font-Montserrat flex bg-gradient-to-r 
                 
                    from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
             >

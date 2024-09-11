@@ -12,7 +12,11 @@ export default function ContactMe() {
       <div className="flex mobilesS:pb-5 mobilesS:text-center  h-min mobilesS:justify-center md:basis-1 xl:items-start md:items-start flex-col gap-1">
         <div className="flex justify-center mobilesS:items-center mobilesS:gap-2 md:gap-1  md:flex-col md:items-start mobilesS:text-4xl sm:text-6xl lg:text-7xl xl:text-8xl">
           <p
-            className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
+            style={{
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+            className={`font-black items-center font-Montserrat flex  bg-gradient-to-r from-[#bcbcbc] via-[#282828] to-[#bcbcbc] text-transparent`}
           >
             CONTACT
           </p>
