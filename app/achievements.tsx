@@ -71,7 +71,11 @@ export default function Achievments() {
         <div className="flex mobilesS:justify-center md:basis-1 xl: items-center md:items-start flex-col text-center gap-1">
           <div className="flex justify-center  mobilesS:flex-row md:flex-col mobilesS:text-4xl mobileL:text-5xl sm:text-7xl  lg:text-8xl xl:text-9xl">
             <p
-              className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r ${
+              style={{
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+              className={`font-black items-center font-Montserrat flex  bg-gradient-to-r ${
                 darkMode
                   ? "from-white via-[#545454] to-white"
                   : "from-[#bcbcbc] via-[#282828] to-[#bcbcbc]"

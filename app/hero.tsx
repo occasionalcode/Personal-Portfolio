@@ -71,7 +71,13 @@ export default function Hero() {
       </div>
       <div className="flex flex-col">
         <div>
-          <p className="font-Poppins mb-2 flex justify-center mobilesS:text-base mobilesS:mb-0 sm:text-xl lg:text-2xl  xl:text-xl bg-gradient-to-r from-white via-[#545454] to-white text-transparent bg-clip-text">
+          <p
+            style={{
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+            className="font-Poppins mb-2 flex justify-center mobilesS:text-base mobilesS:mb-0 sm:text-xl lg:text-2xl  xl:text-xl bg-gradient-to-r from-white via-[#545454] to-white text-transparent"
+          >
             Looking for a
           </p>
         </div>
@@ -80,7 +86,11 @@ export default function Hero() {
             <div className="flex items-center flex-col">
               <div className="animation-container">
                 <p
-                  className={`z-30 font-Roboto font-bold mobilesS:text-5xl mobilesS:mb-2 mobileL:text-7xl mobileL:mb-0 sm:text-8xl md:text-9xl lg:text-[10rem] xl:mb-0 xl:text-[13rem] bg-gradient-to-r from-white via-[#545454] to-white from-10%  via-50% to-75% text-transparent bg-clip-text animate-carousel`}
+                  style={{
+                    WebkitBackgroundClip: "text",
+                    color: "transparent",
+                  }}
+                  className={`z-30 font-Roboto font-bold mobilesS:text-5xl mobilesS:mb-2 mobileL:text-7xl mobileL:mb-0 sm:text-8xl md:text-9xl lg:text-[10rem] xl:mb-0 xl:text-[13rem] bg-gradient-to-r from-white via-[#545454] to-white from-10%  via-50% to-75% text-transparent animate-carousel`}
                 >
                   DEVELOP
                   <span className={"text-black font-outline-2"}>ER?</span>
@@ -88,7 +98,11 @@ export default function Hero() {
               </div>
               <div className="animation-container">
                 <p
-                  className={`z-30 font-Roboto font-bold mobilesS:text-5xl mobilesS:mb-2 mobileL:text-7xl mobileL:mb-0 sm:text-8xl md:text-9xl lg:text-[10rem] xl:mb-0 xl:text-[13rem] bg-gradient-to-r from-white via-[#545454] to-white from-10%  via-50%  to-75% text-transparent bg-clip-text animate-carousel`}
+                  style={{
+                    WebkitBackgroundClip: "text",
+                    color: "transparent",
+                  }}
+                  className={`z-30 font-Roboto font-bold mobilesS:text-5xl mobilesS:mb-2 mobileL:text-7xl mobileL:mb-0 sm:text-8xl md:text-9xl lg:text-[10rem] xl:mb-0 xl:text-[13rem] bg-gradient-to-r from-white via-[#545454] to-white from-10%  via-50%  to-75% text-transparent animate-carousel`}
                 >
                   DESIGN
                   <span className={"text-black font-outline-2"}>ER?</span>
