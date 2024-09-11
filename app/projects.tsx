@@ -156,7 +156,11 @@ export default function Projects() {
       <div className="flex justify-center items-center flex-col">
         <div className="flex justify-center   mobilesS:flex-row  mobilesS:text-4xl mobileL:text-5xl sm:text-7xl  lg:text-8xl xl:text-9xl">
           <p
-            className={`font-black items-center font-Montserrat flex bg-clip-text bg-gradient-to-r from-white via-[#545454] to-white text-transparent`}
+            style={{
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+            className={`font-black items-center font-Montserrat flex bg-gradient-to-r from-white via-[#545454] to-white text-transparent`}
           >
             PRO
           </p>

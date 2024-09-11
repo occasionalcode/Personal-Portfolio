@@ -33,7 +33,11 @@ export default function About() {
         <div className="flex flex-col font-Montserrat sm:gap-3 mobilesS:justify-center mobilesS:items-center mobilesS:text-5xl mobileL:text-6xl sm:text-8xl md:text-7xl md:gap-0 md:items-start lg:text-9xl xl:text-[10rem] font-black md:mt-20">
           <div className="mobilesS:flex mobilesS:gap-5 sm:gap-7 md:gap-2 md:flex-col lg:gap-0">
             <p
-              className={`font-black items-center font-Montserrat  mobilesS:justify-center md:justify-start flex md:pl-3 mobileS:items-center bg-clip-text bg-gradient-to-r from-white via-[#545454] to-white from-5% via-50% to-75% text-transparent`}
+              style={{
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+              className={`font-black items-center font-Montserrat  mobilesS:justify-center md:justify-start flex md:pl-3 mobileS:items-center bg-gradient-to-r from-white via-[#545454] to-white from-5% via-50% to-75% text-transparent`}
             >
               AB
               <span
