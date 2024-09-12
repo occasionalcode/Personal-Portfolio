@@ -2,12 +2,14 @@
 import {
   Award,
   BookUser,
+  ExternalLink,
   FolderKanbanIcon,
   HomeIcon,
   Info,
   Moon,
   MoonStarIcon,
   Phone,
+  SquareArrowOutUpRight,
   Sun,
   SunDim,
 } from "lucide-react";
@@ -26,34 +28,36 @@ import { goToSection } from "@/lib/utils";
 const Navbar = () => {
   return (
     <div className="w-full sticky top-5 flex justify-center z-30 ">
-      <ul className="border-[0.5px] border-white text-white bg-black backdrop-blur-sm bg-opacity-55 w-72 h-10 absolute flex flex-row justify-evenly rounded-2xl mobilesS:hidden sm:flex ">
-        <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
-          <button onClick={() => goToSection("home")}>
-            <HomeIcon size={25} />
-          </button>
-        </li>
-        <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
-          <button onClick={() => goToSection("about")}>
-            <BookUser size={25} />
-          </button>
-        </li>
-        <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
-          <button onClick={() => goToSection("awards")}>
-            <Award size={25} />
-          </button>
-        </li>
-        <li className=" w-full flex justify-center items-center">
-          <button onClick={() => goToSection("projects")}>
-            <FolderKanbanIcon size={25} />
-          </button>
-        </li>
+      <div className="flex gap-5">
+        <ul className="border-[0.5px] border-white text-white bg-black backdrop-blur-sm bg-opacity-55 w-72 h-10  flex flex-row justify-evenly rounded-2xl mobilesS:hidden sm:flex ">
+          <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
+            <button onClick={() => goToSection("home")}>
+              <HomeIcon size={25} />
+            </button>
+          </li>
+          <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
+            <button onClick={() => goToSection("about")}>
+              <BookUser size={25} />
+            </button>
+          </li>
+          <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-br-none">
+            <button onClick={() => goToSection("awards")}>
+              <Award size={25} />
+            </button>
+          </li>
+          <li className=" w-full flex justify-center items-center">
+            <button onClick={() => goToSection("projects")}>
+              <FolderKanbanIcon size={25} />
+            </button>
+          </li>
+          <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-tl-none ">
+            <button onClick={() => goToSection("contact")}>
+              <Phone size={25} />
+            </button>
+          </li>
+        </ul>
+      </div>
 
-        <li className=" w-full flex justify-center items-center rounded-2xl rounded-tr-none rounded-tl-none ">
-          <button onClick={() => goToSection("contact")}>
-            <Phone size={25} />
-          </button>
-        </li>
-      </ul>
       <ul className="sm:hidden text-navbarGrey1 w-72 h-10 absolute flex flex-row justify-evenly rounded-2xl">
         <Popover>
           <PopoverTrigger>
