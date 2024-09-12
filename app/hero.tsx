@@ -5,7 +5,7 @@ import Wave from "react-wavify";
 
 import Balls from "./components/reusable components/Balls";
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -55,18 +55,18 @@ export default function Hero() {
       <div className="absolute mobilesS:left-5 mobilesS:bottom-5 xl:left-16 xl:bottom-14 z-50">
         <a
           href="/resume/Ibanez_Gabriel_Resume.pdf"
-          download={"Ibanez_Gabriel_Resume.pdf"}
+          target="_blank"
           className="mobilesS:hidden md:flex justify-center items-center  gap-3 px-5 py-2 rounded-md hover:bg-white hover:transition-all hover:ease-in-out hover:duration-500  hover:text-black  bg-transparent outline outline-white outline-2 text-white mobilesS:text-sm lg:text-base "
         >
-          <Download />
-          <p>Download Resume</p>
+          <ExternalLink />
+          <p>Open Resume</p>
         </a>
         <a
           href="/resume/Ibanez_Gabriel_Resume.pdf"
-          download={"Ibanez_Gabriel_Resume.pdf"}
+          target="_blank"
           className="mobilesS:flex md:hidden  gap-3 px-2 py-1 rounded-md hover:bg-white hover:transition-all hover:ease-in-out hover:duration-500  hover:text-black  bg-transparent outline outline-white outline-2 text-white"
         >
-          <Download />
+          <ExternalLink />
         </a>
       </div>
       <div className="flex flex-col">

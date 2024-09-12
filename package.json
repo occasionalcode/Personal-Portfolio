@@ -29,6 +29,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
+    "react-intersection-observer": "^9.13.1",
     "react-wavify": "^1.11.1",
     "swiper": "^11.1.9",
     "tailwind-merge": "^2.3.0",
